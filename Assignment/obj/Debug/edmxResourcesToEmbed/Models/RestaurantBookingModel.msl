@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RestaurantBookingModelStoreContainer" CdmEntityContainer="RestaurantBookingModelContainer">
+    <EntitySetMapping Name="RestaurantsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(RestaurantBookingModel.Restaurants)">
+        <MappingFragment StoreEntitySet="RestaurantsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Signaturedish" ColumnName="Signaturedish" />
+          <ScalarProperty Name="ReceptionCapacity" ColumnName="ReceptionCapacity" />
+          <ScalarProperty Name="PerCapitaConsumption" ColumnName="PerCapitaConsumption" />
+          <ScalarProperty Name="OpeningHours" ColumnName="OpeningHours" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingSet">
+      <EntityTypeMapping TypeName="IsTypeOf(RestaurantBookingModel.Booking)">
+        <MappingFragment StoreEntitySet="BookingSet">
+          <ScalarProperty Name="BookingId" ColumnName="BookingId" />
+          <ScalarProperty Name="BookingRestaurant" ColumnName="BookingRestaurant" />
+          <ScalarProperty Name="SeatsNumber" ColumnName="SeatsNumber" />
+          <ScalarProperty Name="Requirements" ColumnName="Requirements" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="RestaurantBookingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="RestaurantBookingModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="RestaurantsSet" EntityType="RestaurantBookingModel.Restaurants" />
+    <EntitySet Name="BookingSet" EntityType="RestaurantBookingModel.Booking" />
+  </EntityContainer>
+  <EntityType Name="Restaurants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Location" Type="String" Nullable="false" />
+    <Property Name="Signaturedish" Type="String" Nullable="false" />
+    <Property Name="ReceptionCapacity" Type="String" Nullable="false" />
+    <Property Name="PerCapitaConsumption" Type="String" Nullable="false" />
+    <Property Name="OpeningHours" Type="String" Nullable="false" />
+    <Property Name="Date" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Booking">
+    <Key>
+      <PropertyRef Name="BookingId" />
+    </Key>
+    <Property Name="BookingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookingRestaurant" Type="String" Nullable="false" />
+    <Property Name="SeatsNumber" Type="String" Nullable="false" />
+    <Property Name="Requirements" Type="String" Nullable="false" />
+    <Property Name="BookingDate" Type="String" Nullable="false" />
+    <Property Name="UserId" Type="String" Nullable="false" />
+    <Property Name="Date" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

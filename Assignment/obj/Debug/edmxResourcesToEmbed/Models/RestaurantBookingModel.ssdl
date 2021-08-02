@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RestaurantBookingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="RestaurantBookingModelStoreContainer">
+    <EntitySet Name="RestaurantsSet" EntityType="RestaurantBookingModel.Store.RestaurantsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BookingSet" EntityType="RestaurantBookingModel.Store.BookingSet" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="RestaurantsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Signaturedish" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ReceptionCapacity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PerCapitaConsumption" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OpeningHours" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookingSet">
+    <Key>
+      <PropertyRef Name="BookingId" />
+    </Key>
+    <Property Name="BookingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookingRestaurant" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SeatsNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Requirements" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BookingDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema>
